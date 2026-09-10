@@ -33,7 +33,7 @@ def _base_dir():
     env = os.environ.get("COL_DATA_DIR")
     if env: return Path(env)
     # default: the folder that contains this dashboard/ directory
-    return Path(__file__).resolve().parents[1]
+    return Path(__file__).resolve().parents[2]
 
 def load_artifacts(base_dir=None):
     base = Path(base_dir) if base_dir else _base_dir()
