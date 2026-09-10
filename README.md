@@ -3,7 +3,8 @@
 An explainable, reproducible system for short-term crime **hotspot prediction and decision support**
 in the City of London, using open UK police data. MSc Data Science dissertation project.
 
-**Author:** Mallika Abina (25931942) · **Supervisor:** Liangxiu Han
+**Author:** Mallika Abina (25931942) · 
+**Supervisor:** Liangxiu Han
 **Manchester Metropolitan University**, Department of Computing and Mathematics · 2026
 
 ---
