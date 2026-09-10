@@ -1,0 +1,5 @@
+,ROC_AUC,PR_AUC,Precision,Recall,F1,Brier
+Persistence,0.855,0.599,0.756,0.747,0.752,0.066
+LogisticRegression,0.974,0.866,0.619,0.886,0.729,0.064
+RandomForest,0.97,0.822,0.77,0.722,0.745,0.047
+XGBoost,0.964,0.842,0.677,0.848,0.753,0.059

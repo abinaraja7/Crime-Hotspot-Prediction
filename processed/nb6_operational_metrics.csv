@@ -1,0 +1,9 @@
+coverage,HitRate,AreaFlagged,PAI,model
+10%,0.306,0.095,3.21,Persistence
+20%,0.56,0.202,2.77,Persistence
+10%,0.445,0.095,4.67,LogisticRegression
+20%,0.675,0.202,3.33,LogisticRegression
+10%,0.443,0.095,4.66,RandomForest
+20%,0.665,0.202,3.29,RandomForest
+10%,0.447,0.095,4.7,XGBoost
+20%,0.663,0.202,3.28,XGBoost

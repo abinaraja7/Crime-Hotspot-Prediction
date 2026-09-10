@@ -1,0 +1,5 @@
+,HitRate,PctAreaFlagged,PAI
+Persistence,0.529,0.133,3.99
+LogisticRegression,0.655,0.192,3.41
+RandomForest,0.515,0.126,4.09
+XGBoost,0.602,0.168,3.57

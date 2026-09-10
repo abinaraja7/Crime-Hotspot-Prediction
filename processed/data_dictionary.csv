@@ -1,0 +1,16 @@
+column,dtype,non_null,n_unique
+crime_id,object,8326,8326
+month,datetime64[ns],8435,13
+reported_by,category,8435,1
+falls_within,object,8435,1
+longitude,float64,8435,226
+latitude,float64,8435,224
+location,object,8435,186
+lsoa_code,category,8435,6
+lsoa_name,category,8435,6
+crime_type,category,8435,14
+last_outcome,category,8326,11
+source_file,object,8435,13
+month_period,object,8435,13
+has_geocode,bool,8435,1
+in_city_of_london,bool,8435,1

@@ -1,0 +1,10 @@
+feature,group,calculation,justification,shap_role
+roll3_mean,temporal,Mean crime count in the cell over the previous 3 months (t-1..t-3),"Near-repeat / hotspot persistence (Ratcliffe, 2005; Chainey et al., 2008)",Smoothed recent level; expected large positive SHAP for chronically busy cells
+trend_1,temporal,Change in count from t-2 to t-1 (lag1 - lag2),Short-term momentum of the near-repeat process,Separates heating-up from cooling-down cells at equal level; signed SHAP shows direction
+prior_hotspot_freq,temporal,Fraction of all prior months the cell was itself a hotspot,"Hotspot stability/chronicity (Chainey et al., 2008)",Distinguishes habitual from occasional hotspots; strongest single correlate of target
+neigh_lag1_sum,spatial,Total crime in the 8 queen-contiguous neighbour cells in t-1,"Spatial diffusion of near-repeat risk (Ratcliffe, 2005; Chainey et al., 2008)",Quantifies 'neighbourhood pressure'; mappable SHAP shows spillover into a cell
+osm_retail_density,contextual,Count of shop=* per km^2 in the cell,"Retail as crime attractor/generator (Zhang et al., 2020)","Explains acquisitive-crime risk from land use, not history"
+osm_food_drink_density,contextual,restaurant/cafe/fast_food per km^2 in the cell,"Routine-activity ambient population (Zhang et al., 2022)",Attributes risk to footfall-generating land use
+osm_licensed_count,contextual,pub/bar/nightclub count in the cell,"Alcohol outlets & violence/public order (Zhang et al., 2020, 2022)",Isolates alcohol-related contribution in the explanation
+osm_transport_nodes,contextual,Rail/tube/subway/bus nodes in the cell,"Transit nodes concentrate transient population/mobility (Zhang et al., 2020)",Explains risk at accessibility hubs
+osm_road_density_m,contextual,Total highway length (m) within the cell,"Street permeability & offender movement (Zhang et al., 2022)",Links accessibility of the street network to opportunity

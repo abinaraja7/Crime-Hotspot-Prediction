@@ -1,0 +1,78 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "xgboost": "3.2.0",
+    "scipy": "1.15.3",
+    "joblib": "1.5.3"
+  },
+  "seeds": {
+    "numpy_global": 42,
+    "logreg_random_state": 42,
+    "rf_random_state": 42,
+    "xgb_random_state": 42
+  },
+  "features": [
+    "roll3_mean",
+    "trend_1",
+    "prior_hotspot_freq",
+    "neigh_lag1_sum",
+    "osm_retail_density",
+    "osm_food_drink_density",
+    "osm_licensed_count",
+    "osm_transport_nodes",
+    "osm_road_density_m"
+  ],
+  "walk_forward": {
+    "scheme": "expanding-window",
+    "initial_train_months": 4,
+    "test_months": [
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01"
+    ],
+    "fold_train_rows": {
+      "2025-07": 336,
+      "2025-08": 420,
+      "2025-09": 504,
+      "2025-10": 588,
+      "2025-11": 672,
+      "2025-12": 756,
+      "2026-01": 840
+    }
+  },
+  "target": {
+    "definition": "within-month P80 of occupied-cell counts",
+    "prevalence_full": 0.1364
+  },
+  "classification_threshold": 0.5,
+  "model_params": {
+    "LogisticRegression": {
+      "max_iter": 1000,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "scaled": true
+    },
+    "RandomForest": {
+      "n_estimators": 300,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "XGBoost": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "scale_pos_weight": "train-fold neg/pos",
+      "random_state": 42
+    }
+  }
+}

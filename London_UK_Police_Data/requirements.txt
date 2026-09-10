@@ -1,0 +1,13 @@
+# Environment specification for the Explainable-AI Crime Hotspot framework
+# Generated from processed/run_manifest.json (the versions actually used to produce all results).
+# Python 3.10.12
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+xgboost==3.2.0
+scipy==1.15.3
+joblib==1.5.3
+matplotlib
+shap  # used in Notebook 6 evaluation stage
+streamlit  # dashboard (Notebook 7 / dashboard/app.py)
+python-docx  # documents only

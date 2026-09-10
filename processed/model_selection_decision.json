@@ -1,0 +1,57 @@
+{
+  "selected_model": "LogisticRegression",
+  "rationale": "Best & most stable discrimination (PR-AUC 0.866, ROC-AUC 0.974); operational parity (PAI ~4.7 @10%); best interpretability (exact additive explanations). Only deficit: calibration (Brier 0.064 vs RF 0.047): a stated limitation, secondary for top-k RANKING; recalibration left to future work (not implemented or evaluated). Framework uses ranking, not absolute probabilities; dashboard must not present uncalibrated values as precise probabilities.",
+  "pooled_metrics": {
+    "Persistence": {
+      "ROC_AUC": 0.8547536743677104,
+      "PR_AUC": 0.5989275944067988,
+      "Precision": 0.7564102564102564,
+      "Recall": 0.7468354430379747,
+      "F1": 0.7515923566878981,
+      "Brier": 0.0663265306122449
+    },
+    "LogisticRegression": {
+      "ROC_AUC": 0.9739872174280669,
+      "PR_AUC": 0.8661262423267522,
+      "Precision": 0.6194690265486725,
+      "Recall": 0.8860759493670886,
+      "F1": 0.7291666666666666,
+      "Brier": 0.06438972066868913
+    },
+    "RandomForest": {
+      "ROC_AUC": 0.9702320260625202,
+      "PR_AUC": 0.8219994108299206,
+      "Precision": 0.7702702702702703,
+      "Recall": 0.7215189873417721,
+      "F1": 0.7450980392156863,
+      "Brier": 0.04731128117913832
+    },
+    "XGBoost": {
+      "ROC_AUC": 0.9638904777299744,
+      "PR_AUC": 0.8419510265317562,
+      "Precision": 0.6767676767676768,
+      "Recall": 0.8481012658227848,
+      "F1": 0.7528089887640449,
+      "Brier": 0.059438299066154436
+    }
+  },
+  "operational_PAI_at": {
+    "10pct": {
+      "Persistence": 3.21,
+      "LogisticRegression": 4.67,
+      "RandomForest": 4.66,
+      "XGBoost": 4.7
+    },
+    "20pct": {
+      "Persistence": 2.77,
+      "LogisticRegression": 3.33,
+      "RandomForest": 3.29,
+      "XGBoost": 3.28
+    }
+  },
+  "top_drivers": [
+    "roll3_mean",
+    "prior_hotspot_freq",
+    "neigh_lag1_sum"
+  ]
+}

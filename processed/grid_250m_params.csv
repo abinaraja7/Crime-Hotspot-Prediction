@@ -1,0 +1,2 @@
+lon0,lat0,earth_radius_m,cell_size_m,x0,y0,nrow,ncol,hotspot_percentile,hotspot_count_threshold,n_hotspot_cells,kde_bandwidth_m
+-0.08919993467694133,51.51453185394191,6371000.0,250,-1750,-750,7,12,80,213.2,11,200.0
